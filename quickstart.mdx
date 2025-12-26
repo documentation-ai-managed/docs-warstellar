@@ -1,0 +1,146 @@
+---
+title: Getting Started with Warstellar
+description: Download and launch Warstellar to begin coding with AI assistance in just a few minutes.
+---
+
+## Prerequisites
+
+Before installing Warstellar, ensure your system meets these minimum requirements.
+
+<Callout kind="info">
+
+**System Requirements:**
+
+- **OS:** Windows 10 (64-bit) or later, macOS 11+ (Intel or Apple Silicon), Linux (Ubuntu 20.04+, Debian 11+, or Fedora 36+)
+- **CPU:** 4-core Intel/AMD or Apple M1 equivalent
+- **RAM:** 8 GB minimum (16 GB recommended)
+- **Storage:** 2 GB free space
+- **Internet:** Required for download and initial setup
+
+</Callout>
+
+## Download Warstellar
+
+Visit the [official download page](https://warstellar.com/download) to get the latest installer for your platform. Choose the appropriate file:
+
+| Platform | File Name                  | Size   |
+|----------|----------------------------|--------|
+| Windows  | Warstellar-Setup.exe       | 150 MB |
+| macOS    | Warstellar.dmg             | 140 MB |
+| Linux    | warstellar_amd64.deb       | 145 MB |
+
+<Callout kind="tip">
+Always download from the official site to ensure security and get the latest version.
+</Callout>
+
+## Install Warstellar
+
+Follow the platform-specific instructions below.
+
+<Tabs>
+  <Tab title="Windows" icon="monitor">
+    <Steps>
+      <Step title="Run Installer">
+        Double-click `Warstellar-Setup.exe` and follow the wizard.
+      </Step>
+      <Step title="Grant Permissions">
+        Allow installation when prompted by User Account Control.
+      </Step>
+      <Step title="Finish">
+        Click "Finish" to launch Warstellar.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="macOS" icon="apple">
+    <Steps>
+      <Step title="Open DMG">
+        Double-click `Warstellar.dmg` and drag the app to Applications.
+      </Step>
+      <Step title="Launch from Applications">
+        Open Warstellar from your Applications folder.
+      </Step>
+      <Step title="Bypass Gatekeeper (if needed)">
+        Right-click the app, select Open, and confirm.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Linux" icon="terminal">
+    <Steps>
+      <Step title="Install Package">
+````bash
+sudo dpkg -i warstellar_amd64.deb
+sudo apt-get install -f  # Fix dependencies if needed
+````
+      </Step>
+      <Step title="Launch">
+        Run `warstellar` from terminal or find in applications menu.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## First Launch and Account Setup
+
+On first launch, Warstellar guides you through setup.
+
+<Steps>
+  <Step title="Sign Up or Log In" icon="user">
+    Create a free account using email or GitHub. No credit card required.
+  </Step>
+  <Step title="Configure Preferences">
+    Select your theme (Light/Dark) and enable AI features.
+  </Step>
+  <Step title="Verify Installation">
+    Check the status bar for "Ready to code" confirmation.
+  </Step>
+</Steps>
+
+## Create Your First Project
+
+Start coding immediately.
+
+<Steps>
+  <Step title="New Project" icon="plus">
+    Click "New Project" or press `Cmd/Ctrl + N`.
+  </Step>
+  <Step title="Choose Template">
+    Select "Blank Workspace" or a starter like "React App".
+  </Step>
+  <Step title="AI Assist">
+    Type a prompt like "Create a todo list component" and hit Tab to generate code.
+  </Step>
+  <Step title="Run and Edit">
+    Use the built-in terminal: `npm install` then `npm start`.
+  </Step>
+</Steps>
+
+```javascript
+// Example: Generated Todo Component
+import React, { useState } from 'react';
+
+function TodoList() {
+  const [todos, setTodos] = useState([]);
+  // AI-generated logic here
+  return <div>Todo List</div>;
+}
+```
+
+## Next Steps
+
+<Columns cols={3}>
+  <Card title="Introduction" icon="book-open" href="/introduction">
+    Learn core concepts and features.
+  </Card>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Advanced auth and API usage.
+  </Card>
+  <Card title="Keyboard Shortcuts" icon="keyboard" href="/shortcuts">
+    Boost productivity with hotkeys.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+- **App won't launch:** Restart your computer and try again.
+- **AI features unavailable:** Check internet connection and account status.
+- **High CPU usage:** Close unused tabs and update graphics drivers.
+</Expandable>

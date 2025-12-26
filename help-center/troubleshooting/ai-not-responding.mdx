@@ -1,0 +1,25 @@
+---
+title: AI Not Responding in Warstellar
+description: Fix Warstellar when the AI stops responding to prompts.
+---
+
+## Symptoms
+
+- AI does not generate code.
+- Prompts appear stuck or timeout.
+
+## Quick Fix
+
+<Steps>
+  <Step title="Check Internet Connection">
+    ````bash
+    ping api.cursor.so
+    ````
+  </Step>
+  <Step title="Reload Extension">
+    Disable, then re-enable the Warstellar extension in your IDE's extensions menu.
+  </Step>
+  <Step title="Restart IDE">
+    Close and restart your IDE to reset the connection.
+  </Step>
+</Steps>

@@ -1,0 +1,151 @@
+---
+title: Configuring Warstellar
+description: Learn how to personalize Warstellar's settings for optimal performance and workflow integration.
+---
+
+## Overview
+
+Warstellar provides extensive configuration options to tailor the tool to your workflow. You can adjust AI models, themes, shortcuts, extensions, and privacy settings directly from the dashboard. These customizations ensure seamless integration with your development environment and optimal performance.
+
+<Columns cols={3}>
+  <Card title="AI Models" icon="cpu" href="#ai-models">
+    Select and configure your preferred AI models with custom API keys.
+  </Card>
+  <Card title="Themes & Shortcuts" icon="palette" href="#themes-shortcuts">
+    Customize appearance and keyboard bindings for efficiency.
+  </Card>
+  <Card title="Privacy Settings" icon="shield" href="#privacy">
+    Control data syncing and privacy options.
+  </Card>
+</Columns>
+
+## Accessing the Settings Menu
+
+Follow these steps to open and navigate Warstellar's settings.
+
+<Steps>
+  <Step title="Log In" icon="log-in">
+    Navigate to `https://dashboard.example.com` and sign in with your account.
+  </Step>
+  <Step title="Open Settings" icon="settings">
+    Click the gear icon in the top-right corner of the dashboard.
+  </Step>
+  <Step title="Navigate Sections" icon="menu">
+    Use the sidebar to switch between General, AI, Themes, Extensions, and Privacy tabs.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Settings sync across devices if you enable cloud backup in the Privacy section.
+</Callout>
+
+## Configuring AI Model Preferences and API Keys
+
+Warstellar supports multiple AI models. Configure them by selecting a provider and entering your API key.
+
+<Tabs>
+  <Tab title="OpenAI" icon="zap">
+    Select OpenAI from the AI Models dropdown, then enter your key.
+    
+    <ParamField header="Authorization" param-type="string" required="true">
+      Bearer `{YOUR_API_KEY}`
+    </ParamField>
+    
+    ```json
+    {
+      "model": "gpt-4o",
+      "apiKey": "YOUR_OPENAI_API_KEY",
+      "baseUrl": "https://api.openai.com/v1"
+    }
+    ```
+  </Tab>
+  <Tab title="Anthropic" icon="brain">
+    Choose Anthropic and input your API key.
+    
+    <ParamField header="x-api-key" param-type="string" required="true">
+      `{YOUR_ANTHROPIC_KEY}`
+    </ParamField>
+    
+    ```json
+    {
+      "model": "claude-3-5-sonnet",
+      "apiKey": "YOUR_ANTHROPIC_API_KEY",
+      "baseUrl": "https://api.anthropic.com/v1"
+    }
+    ```
+  </Tab>
+</Tabs>
+
+<CodeGroup tabs="CLI,Config File">
+  ```bash
+  warstellar config set ai.provider openai
+  warstellar config set ai.apiKey YOUR_API_KEY
+  ```
+  ```json
+  // ~/.warstellar/config.json
+  {
+    "ai": {
+      "provider": "openai",
+      "apiKey": "YOUR_API_KEY"
+    }
+  }
+  ```
+</CodeGroup>
+
+## Managing Themes, Shortcuts, and Extensions
+
+Personalize your interface with themes and custom shortcuts. Install extensions for added functionality.
+
+### Themes
+Choose from light, dark, or custom themes. Upload CSS for advanced customization.
+
+```css
+/* Custom theme example */
+:root {
+  --primary-color: #040404;
+  --accent-color: #00ff88;
+}
+```
+
+### Shortcuts
+Edit keybindings in the Shortcuts tab. Default: `<kbd>Ctrl</kbd>+<kbd>K</kbd> for command palette.
+
+### Extensions
+Browse and install from the marketplace.
+
+<Expandable title="Popular Extensions" default-open="true">
+  - Code completion: `warstellar-ai-complete`
+  - Git integration: `warstellar-git`
+  - Debug tools: `warstellar-debugger`
+</Expandable>
+
+## Privacy and Data Syncing Options
+
+Control how Warstellar handles your data.
+
+| Option | Description | Default |
+|--------|-------------|---------|
+| Cloud Sync | Sync settings across devices | Enabled |
+| Telemetry | Anonymous usage data | Enabled |
+| Local Only | Store data on device | Disabled |
+
+<Callout kind="alert">
+  Disable telemetry if you prioritize maximum privacy. Review the privacy policy at `https://warstellar.com/privacy`.
+</Callout>
+
+<Expandable title="Advanced Privacy Settings">
+  Enable end-to-end encryption for synced data:
+  
+  ```bash
+  warstellar config set privacy.e2ee true
+  warstellar config set privacy.syncKey YOUR_SYNC_KEY
+  ```
+</Expandable>
+
+## Troubleshooting Common Issues
+
+- **API Key Errors**: Verify your key format and permissions. Test with `warstellar test ai`.
+- **Theme Not Applying**: Clear cache with `<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>`.
+- **Sync Failures**: Check network and re-authenticate.
+
+These configurations optimize Warstellar for your needs. Explore [Quickstart](/quickstart) for initial setup.
