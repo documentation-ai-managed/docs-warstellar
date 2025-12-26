@@ -20,6 +20,11 @@
             "icon": "rocket",
             "pages": [
               {
+                "title": "Release History",
+                "path": "changelog",
+                "icon": "history"
+              },
+              {
                 "title": "Introduction",
                 "path": "introduction",
                 "icon": "home"
@@ -85,19 +90,19 @@
             "expandable": false,
             "pages": [
               {
+                "group": "Guides",
+                "icon": "book-open",
+                "expandable": false,
+                "pages": [
+                  {
+                    "title": "Enable Auto Complete",
+                    "path": "help-center/guides/enable-auto-complete"
+                  }
+                ]
+              },
+              {
                 "title": "AI Not Responding",
                 "path": "help-center/troubleshooting/ai-not-responding"
-              }
-            ]
-          },
-          {
-            "group": "Guides",
-            "icon": "book-open",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Enable Auto Complete",
-                "path": "help-center/guides/enable-auto-complete"
               }
             ]
           }
@@ -106,11 +111,24 @@
       {
         "tab": "Changelog",
         "icon": "clock",
-        "pages": [
+        "pages": []
+      },
+      {
+        "tab": "Test",
+        "dropdowns": [
           {
-            "title": "Release History",
-            "path": "changelog",
-            "icon": "history"
+            "dropdown": "123DR",
+            "pages": [
+              {
+                "group": "t123",
+                "pages": [
+                  {
+                    "title": "12312312",
+                    "path": "12312312"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
