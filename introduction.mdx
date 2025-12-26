@@ -1,8 +1,9 @@
 ---
 title: Introduction to Warstellar
-description: Discover Warstellar, an AI-powered coding tool that revolutionizes development by enabling seamless human-AI collaboration and automating routine tasks.
+description: >-
+  Discover Warstellar, an AI-powered coding tool that revolutionizes development
+  by enabling seamless human-AI collaboration and automating routine tasks.
 ---
-
 ## Overview
 
 Warstellar empowers you to code faster and smarter with AI-driven automation. You collaborate seamlessly with intelligent agents that handle routine tasks, generate code, and optimize workflows. Built on advanced models, Warstellar transforms your development process from manual drudgery to efficient human-AI partnership.
@@ -13,14 +14,16 @@ Focus on creative problem-solving while Warstellar manages boilerplate, debuggin
 
 Warstellar delivers powerful capabilities tailored for modern developers.
 
-<Columns cols={3}>
-  <Card title="AI Code Generation" icon="zap" href="#ai-generation">
+<Columns cols="3">
+  <Card title="AI Code Generation" href="#ai-generation" icon="zap" horizontal="false">
     Generate complete functions, components, or modules from natural language prompts. Accelerate prototyping by 10x.
   </Card>
-  <Card title="Smart Autocomplete" icon="brain" href="#autocomplete">
+
+  <Card title="Smart Autocomplete" href="#autocomplete" icon="brain" horizontal="false">
     Context-aware suggestions that understand your codebase and predict next steps accurately.
   </Card>
-  <Card title="Automated Refactoring" icon="wand-2" href="#refactoring">
+
+  <Card title="Automated Refactoring" href="#refactoring" icon="wand-2" horizontal="false">
     Refactor legacy codebases effortlessly with one-click AI optimizations.
   </Card>
 </Columns>
@@ -29,7 +32,7 @@ Warstellar delivers powerful capabilities tailored for modern developers.
 
 You save hours weekly on repetitive tasks, reducing burnout and boosting productivity. Teams collaborate better with shared AI insights and consistent code quality. Warstellar adapts to your style, ensuring outputs align with your standards.
 
-<Callout kind="tip">
+<Callout kind="tip" collapsed="false">
   Start small: Use Warstellar for one project to see immediate gains in velocity.
 </Callout>
 
@@ -38,46 +41,101 @@ You save hours weekly on repetitive tasks, reducing burnout and boosting product
 Get up and running in minutes.
 
 <Steps>
-  <Step title="Sign Up" icon="user-plus">
-    Create a free account at https://dashboard.example.com/signup. No credit card required.
+  <Step title="Sign Up" icon="user-plus" title-type="p">
+    Create a free account at [https://dashboard.example.com/signup](https://dashboard.example.com/signup). No credit card required.
   </Step>
-  <Step title="Install Extension" icon="download">
+
+  <Step title="Install Extension" icon="download" title-type="p">
     Add the Warstellar extension to your IDE.
 
-    <CodeGroup tabs="VS Code,JetBrains">
-    ````bash
-    code --install-extension warstellar.ai/warstellar
-    ````
-    ````bash
-    # In JetBrains Toolbox or Settings > Plugins
-    Search for "Warstellar" and install
-    ````
+    <CodeGroup show-lines="true" tabs={[]}>
+      ```bash
+      code --install-extension warstellar.ai/warstellar
+      ```
+
+      ```bash
+      # In JetBrains Toolbox or Settings > Plugins
+      Search for "Warstellar" and install
+      ```
     </CodeGroup>
   </Step>
-  <Step title="First Prompt" icon="play">
+
+  <Step title="First Prompt" icon="play" title-type="p">
     Open a file, type a comment like `// Generate a React component for user login`, and press Tab to accept AI suggestions.
   </Step>
 </Steps>
 
 ## Next Steps
 
+<Request default-tab="0" show-lines="true" tabs={["request"]}>
+  ```javascript request
+  // add request here
+  ```
+</Request>
+
 Dive deeper into Warstellar's capabilities.
 
-<Columns cols={2}>
-  <Card title="Quickstart Guide" icon="book-open" href="/quickstart">
+<Response default-tab="0" show-lines="true" tabs={["response"]}>
+  ```javascript response
+  // add response here
+  ```
+</Response>
+
+<ParamField path="param" param-type="string" required="false" deprecated="false">
+  Parameter description...
+</ParamField>
+
+<Callout kind="success" collapsed="false">
+
+</Callout>
+
+<Card title="New Card" horizontal="false">
+  Card description...
+</Card>
+
+<Columns cols="2">
+  <Card title="First Card" horizontal="false">
+    Card description...
+  </Card>
+
+  <Card title="Second Card" horizontal="false">
+    Card description...
+  </Card>
+</Columns>
+
+<Update label="2025-12-26">
+
+</Update>
+
+<CodeGroup default-tab="1" show-lines="true" tabs={["new-file.txt"]}>
+  ```text
+  // Add your code here
+  ```
+
+  ```text new-file.txt
+  // Add your code here
+  ```
+</CodeGroup>
+
+<Columns cols="2">
+  <Card title="Quickstart Guide" href="/quickstart" icon="book-open" horizontal="false">
     Build your first AI-assisted app.
   </Card>
-  <Card title="Authentication" icon="shield" href="/authentication">
+
+  <Card title="Authentication" href="/authentication" icon="shield" horizontal="false">
     Secure your API integrations.
   </Card>
-  <Card title="Advanced Features" icon="sparkles" href="/guides/advanced">
+
+  <Card title="Advanced Features" href="/guides/advanced" icon="sparkles" horizontal="false">
     Unlock pro workflows.
   </Card>
-  <Card title="API Reference" icon="code" href="/api">
+
+  <Card title="API Reference" href="/api" icon="code" horizontal="false">
     Integrate programmatically.
   </Card>
 </Columns>
 
-<Callout kind="info">
+<Callout kind="info" collapsed="false">
   Need help? Check the [Help Center](/help-center) or join our community forum.
 </Callout>
+
