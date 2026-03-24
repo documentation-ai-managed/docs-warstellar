@@ -131,7 +131,12 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "reqwrfffs",
+        "pages": []
       }
     ]
-  }
+  },
+  "template": "classic"
 }

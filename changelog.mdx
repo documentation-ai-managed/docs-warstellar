@@ -1,152 +1,61 @@
----
-title: Warstellar Changelog
-description: >-
-  Track the latest updates, improvements, and bug fixes in Warstellar's
-  releases.
----
-## Recent Updates
+# Getting Started
 
-Stay informed about Warstellar's evolution. Yogdf sgdf gdfg dfg fu receive new features that enhance AI-powered coding assistance, performance improvements for faster workflows, and critical bug fixes. Check the details below for each release.
+<Request default-tab="0" show-lines="true" tabs={["request"]}>
+  ```javascript request
+  // add request here
+  ```
+</Request>
 
-<Callout kind="info" collapsed="false">
-  Subscribe to our RSS feed or join the Discord community to get notifications for new releases.
+Welcome to the **MDX editor demo**.\
+This page shows how Markdown and custom components can work together.
+
+<Callout kind="note" collapsed="false">
+  This is a custom callout component rendered inside MDX.
+  You can pass props and render rich content here.
 </Callout>
 
-<Update label="2024-10-15" description="v1.2.0" tags={["feature","improvement"]}>
-  ## New Features
+## Installation
 
-  - Added real-time collaboration mode, allowing multiple developers to edit code simultaneously with AI suggestions.
+Run the following command:
 
-  - Introduced custom prompt templates for tailored code generation.
+```bash
+npm install my-library
+```
 
-  ## Improvements
+## Usage
 
-  - Enhanced code completion speed by `>30%` through optimized model inference.
+<Tabs>
+  <Tab title="JavaScript">
+    ```js
+    import { createClient } from "my-library"
 
-  - Better integration with VS Code extensions for seamless workflow.
+    const client = createClient({
+      apiKey: "your-key"
+    })
 
-  ## Bug Fixes
-
-  - Fixed intermittent failures in multi-file project analysis.
-
-  - Resolved token limit errors during long-context processing.
-
-  ```typescript
-  // Example: Using new collaboration API
-  import { WarstellarClient } from '@warstellar/sdk';
-
-  const client = new WarstellarClient({ apiKey: 'YOUR_API_KEY' });
-  await client.collaborate.startSession('project-id', { users: ['user1', 'user2'] });
-  ```
-</Update>
-
-<Update label="2024-09-20" description="v1.1.0" tags={["feature","bugfix"]}>
-  ## New Features
-
-  - Launched advanced debugging assistant that auto-generates unit tests.
-
-  - Added support for Python 3.12 and Rust language models.
-
-  ## Improvements
-
-  - Reduced latency in chat interface by optimizing WebSocket connections.
-
-  ## Bug Fixes
-
-  - Patched security vulnerability in API key handling (CVE-2024-XXXX).
-
-  - Fixed autocomplete suggestions not respecting user-defined rules.
-
-  <CodeGroup show-lines="true" tabs={[]}>
-    ```typescript
-    const client = new WarstellarClient({ apiKey: 'YOUR_API_KEY' });
-    const tests = await client.debug.generateTests('src/main.ts');
+    client.start()
     ```
+  </Tab>
 
+  <Tab title="Python">
     ```python
-    from warstellar import Client
-    client = Client(api_key="YOUR_API_KEY")
-    tests = client.debug.generate_tests("main.py")
+    from my_library import Client
+
+    client = Client(api_key="your-key")
+    client.start()
     ```
-  </CodeGroup>
-</Update>
+  </Tab>
+</Tabs>
 
-<Update label="2024-08-10" description="v1.0.0" tags={["breaking","feature"]}>
-  ## New Features
+## Notes
 
-  - Core AI coding assistant with natural language to code conversion.
+- MDX supports **Markdown**
 
-  - Integrated dashboard at `https://dashboard.warstellar.com` for project management.
+- It also supports **React components**
 
-  ## Breaking Changes
+- You can mix them freely
 
-  - Updated authentication to use JWT tokens instead of API keys only. Migrate by regenerating tokens.
-
-  ## Bug Fixes
-
-  - Initial stability improvements for edge cases in code parsing.
-</Update>
-
-## Migration Guides
-
-For breaking changes in recent releases, follow these steps to update your integration smoothly.
-
-<Steps>
-  <Step title="Update SDK" icon="download" title-type="p">
-    Install the latest version:
-
-    ```bash
-    npm install @warstellar/sdk@latest
-    ```
-  </Step>
-
-  <Step title="Regenerate Tokens" icon="key" title-type="p">
-    Visit `https://dashboard.warstellar.com/settings/tokens` and create new JWT tokens.
-  </Step>
-
-  <Step title="Update Code" icon="code" title-type="p">
-    Replace API key auth with token:
-
-    ```typescript
-    // Old
-    const client = new WarstellarClient({ apiKey: 'old-key' });
-
-    // New
-    const client = new WarstellarClient({ token: 'YOUR_JWT_TOKEN' });
-    ```
-  </Step>
-</Steps>
-
-<Callout kind="alert" collapsed="false">
-  Test thoroughly in staging before deploying to production.
+<Callout kind="note" collapsed="false">
+  Avoid putting large business logic inside MDX files.
 </Callout>
-
-## Upcoming Roadmap
-
-Get a glimpse of what's next for Warstellar.
-
-<Columns cols="3">
-  <Card title="Q4 2024" href="#" icon="rocket" horizontal="false">
-    Multimodal AI support for images and diagrams in code gen.
-  </Card>
-
-  <Card title="Q1 2025" href="#" icon="zap" horizontal="false">
-    On-device inference for privacy-focused coding.
-  </Card>
-
-  <Card title="Q2 2025" href="#" icon="shield" horizontal="false">
-    Enterprise-grade compliance (SOC 2, GDPR enhancements).
-  </Card>
-</Columns>
-
-<Expandable title="Detailed Roadmap" default-open="false">
-  Explore our public roadmap on GitHub for voting and feedback.
-
-  ```mermaid
-  graph TD
-      A[Current: v1.2.0] --> B[Q4: Multimodal]
-      B --> C[Q1: On-Device]
-      C --> D[Q2: Enterprise]
-  ```
-</Expandable>
 
